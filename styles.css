@@ -26,10 +26,12 @@
 
 .signup {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .login {
   margin-left: 20px;
+  cursor:pointer;
 }
 
 .header-container {
@@ -43,8 +45,9 @@
   width: 900px;
   height: 300px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .photo-grid-container {
