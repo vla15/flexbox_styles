@@ -1,7 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+  margin: 0px;
+}
+
+.wrapper {
+  display: flex;
+  border: 10px solid goldenrod;
+  min-width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  background-color: #5995DA;
 }
 
 .menu-container {
