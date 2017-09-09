@@ -7,7 +7,7 @@
 body {
   font-family: 'PT Serif', serif;
   font-size: 20px;
-  background-color: #e1e0dc;
+  background-color: #191919;
   -webkit-font-smoothing: antialiased; }
 
 a {
@@ -36,20 +36,20 @@ a {
   .nav--opened .nav__burger:after {
     transform: translate3d(0, -6px, 0) rotate(45deg); }
   .nav__container {
-    padding: 0 15px; }
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between; }
   .nav__title {
     float: left;
     margin: 0;
     height: 60px; }
   .nav__title-link {
-    display: flex;
-    align-items: center;
     padding-left: 0;
     height: 100%;
     color: #eee;
     font-size: 22px;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     letter-spacing: 2px; }
     .nav__title-link:hover {
       color: #eee; }

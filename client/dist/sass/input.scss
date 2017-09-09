@@ -13,7 +13,7 @@ $ns: '.nav';
 body {
   font-family: 'PT Serif', serif;
   font-size: 20px;
-  background-color: $cream;
+  background-color: $black;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,6 +64,8 @@ a {
   // Nav Container
   &__container {
     padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
   }
   
   // Nav Title
@@ -75,14 +77,12 @@ a {
   
   // Nav Title Link
   &__title-link {
-    display: flex;
-    align-items: center;
     padding-left: 0;
     height: 100%;
     color: $off-white;
     font-size: 22px;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     letter-spacing: 2px;
 
     &:hover {
