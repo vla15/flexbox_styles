@@ -1,17 +1,123 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Serif';
+
+$off-white: #eee;
+$black: #191919;
+$blue: #2AA3BF;
+$cream: #e1e0dc;
+
+$ns: '.nav';
+
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-  margin: 0px;
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  background-color: $cream;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
   display: flex;
-  border: 10px solid goldenrod;
   min-width: 100%;
   min-height: 100%;
   flex-direction: column;
   background-color: #5995DA;
 }
+
+
+#{$ns} {
+  $nav-height: 60px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: $nav-height;
+  background-color: $black;
+
+  &__container {
+    padding: 0 15px;
+  }
+
+  &__title {
+    float: left;
+    margin: 0;
+    height: $nav-height;
+  }
+
+  &__title-link {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    height: 100%;
+    color: $off-white;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: $off-white;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: $nav-height;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $black;
+    list-style: none;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 300ms ease-out,
+                height 0ms linear 300ms;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 0;
+    color: $off-white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  &__burger {
+    float: right;
+    position: relative;
+    width: $nav-height;
+    height: $nav-height;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      width: 40px;
+      height: 4px;
+      background-color: $off-white;
+      transform-origin: 50% 50%;
+      transition: transform 275 ease;
+    }
+
+    &:before {
+      top: 22px;
+    }
+    &:after {
+      top: 34px;
+    }
+  }
+}
+
 
 /*.menu-container {
   color: #fff;
