@@ -1,7 +1,3 @@
-var menu = document.querySelector('.nav__burger');
-console.dir(menu);
-
-
 class HtmlComponents {
   constructor(selector) {
     this.baseClass = 'component';
@@ -35,9 +31,13 @@ class FlexNav extends HtmlComponents {
     this.isOpen = !this.isOpen;
 
     if (this.isOpen) {
-      this.burger.addModifier('opened');
+      this.addModifier('opened');
     } else {
-      this.burger.removeModifier('opened');
+      this.removeModifier('opened');
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  new FlexNav('#nav');
+})

@@ -23,10 +23,18 @@ a {
 .nav {
   position: fixed;
   left: 0;
-  right: 0;
+  top: 0;
   width: 100%;
   height: 60px;
   background-color: #191919; }
+  .nav--opened .nav__list {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 300ms ease-out; }
+  .nav--opened .nav__burger:before {
+    transform: translate3d(0, 6px, 0) rotate(-45deg); }
+  .nav--opened .nav__burger:after {
+    transform: translate3d(0, -6px, 0) rotate(45deg); }
   .nav__container {
     padding: 0 15px; }
   .nav__title {
@@ -78,7 +86,7 @@ a {
       height: 4px;
       background-color: #eee;
       transform-origin: 50% 50%;
-      transition: transform 275 ease; }
+      transition: transform 275ms ease; }
     .nav__burger:before {
       top: 22px; }
     .nav__burger:after {
